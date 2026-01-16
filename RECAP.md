@@ -4,7 +4,7 @@ Overall, this was pretty straight-forward and fun assessment. I spent 4-5 hours 
 
 I was a bit confused about how to determine which content you see for the role level. I used my best judgement. Would love to chat about that.
 
-i'd love to spend more time on it to make it perfect, but I'm also happy with where it is at currently. 
+I'd love to spend more time on it to make it perfect, but I'm also happy with where it is at currently. 
 
 Thanks for the opportunity!
 
@@ -22,6 +22,18 @@ I wanted to keep as much of the components as I could as Server components.
 
 ### Polymorphic Navigation Components
 I tried to really lean into making the common components, reusable and DRY. The `Button` and `NavButton` components are designed to be polymorphic, capable of rendering as either a Next.js `Link` or a standard HTML `button`.
+
+## 🤖 Ai Usage
+
+### Cursor
+I used Cursor's auto completion to help me speed through most of the building.
+
+### Copilot
+I use Copilot to review my PRs, if I like any of the suggestions, I implement them myself.
+
+### Gemini
+When working through more logic-heavy code or figuring out how to build a feature that is new to me, I like using Gemini as my "rubber duck".
+
 
 
 ## 🚀 Future Improvements
