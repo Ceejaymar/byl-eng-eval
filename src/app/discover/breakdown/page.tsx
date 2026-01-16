@@ -2,6 +2,7 @@ import { getUserResults } from "@/lib/data/users";
 import { getAllRoles } from "@/lib/data/roles";
 import SubNavigation from "@/components/sub-navigation";
 import RoleList from "@/components/role-list";
+import RoleDetails from "@/components/role-details";
 
 const USER_ID = "24601";
 
@@ -22,6 +23,7 @@ export default async function Breakdown({ searchParams }: Breakdown) {
 
   const sortedRoles = [...roles].sort((a, b) => results[b.id] - results[a.id]);
   const activeRole = sortedRoles.find((r) => r.id === role) || sortedRoles[0];
+  const activeIndex = sortedRoles.findIndex((r) => r.id === role);
 
   if (!activeRole) {
     return <div>Role not found</div>;
@@ -31,7 +33,12 @@ export default async function Breakdown({ searchParams }: Breakdown) {
     <div>
       <SubNavigation />
       <RoleList roles={sortedRoles} activeRole={activeRole} />
-      {/* <RoleDetails role={activeRole} /> */}
+      <RoleDetails
+        role={activeRole}
+        roleScore={results[activeRole.id]}
+        totalRoles={sortedRoles.length}
+        activeIndex={activeIndex}
+      />
     </div>
   );
 }

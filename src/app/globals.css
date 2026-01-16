@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-serif: var(--font-fraunces);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -45,5 +47,23 @@ body {
   .hide-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer base {
+  h1, h2, h3 {
+    @apply font-serif tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl mt-6;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl mt-4;
   }
 }
