@@ -37,7 +37,7 @@ export default function SubNavigation({
 
   return (
     <nav className="flex gap-10 max-w-min border-b border-gray-200 whitespace-nowrap">
-      {items.map((item, i) => {
+      {items.map((item) => {
         const isActive = activeCategory?.slug === item.slug;
 
         return (

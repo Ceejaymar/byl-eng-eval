@@ -5,6 +5,7 @@ import RoleList from "@/components/role-list";
 import RoleDetails from "@/components/role-details";
 import Button from "@/components/common/button";
 import { ROLE_NAV_ITEMS } from "@/constants/navigation";
+import ChevronLeft from "@/components/common/ChevronLeft";
 
 const USER_ID = "24601";
 
@@ -33,7 +34,12 @@ export default async function Breakdown({ searchParams }: Breakdown) {
 
   return (
     <section>
-      <Button type="button" href="/discover" icon={"<"} className="mb-8">
+      <Button
+        type="button"
+        href="/discover"
+        icon={<ChevronLeft />}
+        className="mb-8"
+      >
         Back to Summary
       </Button>
       <SubNavigation

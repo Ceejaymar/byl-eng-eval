@@ -19,7 +19,7 @@ export default function NavButton({
   className,
   isDisabled,
 }: NavButton) {
-  const Component = href ? Link : "button";
+  const Component = href ? Link : ("button" as React.ElementType);
 
   const baseStyle = "border-b-4 pb-2 transition-all duration-500";
   const activeStyle = "font-bold border-lime-900";
@@ -27,7 +27,7 @@ export default function NavButton({
 
   return (
     <Component
-      href={href as string}
+      {...(href ? { href } : {})}
       disabled={!href ? isDisabled : undefined}
       onClick={onClick}
       className={`cursor-pointer ${baseStyle} ${
