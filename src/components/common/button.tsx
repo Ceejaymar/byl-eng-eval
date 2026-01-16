@@ -21,13 +21,13 @@ export default function Button({
   onClick,
   icon,
 }: Button) {
-  const Component = href ? Link : "button";
+  const Component = href ? Link : ("button" as React.ElementType);
   const isLink = !!href;
 
   return (
     <Component
       {...(!isLink && { type })}
-      href={href as string}
+      {...(isLink ? { href } : {})}
       disabled={!isLink ? isDisabled : undefined}
       onClick={onClick}
       className={`flex items-center justify-center w-fit whitespace-nowrap border border-gray-300 rounded-full px-4 py-2 shadow-md ${className}`}

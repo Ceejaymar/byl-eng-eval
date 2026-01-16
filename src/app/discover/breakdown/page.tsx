@@ -5,7 +5,7 @@ import RoleList from "@/components/role-list";
 import RoleDetails from "@/components/role-details";
 import Button from "@/components/common/button";
 import { ROLE_NAV_ITEMS } from "@/constants/navigation";
-import ChevronLeft from "@/components/common/ChevronLeft";
+import ChevronLeft from "@/components/common/chevron-left";
 
 const USER_ID = "24601";
 
@@ -25,8 +25,8 @@ export default async function Breakdown({ searchParams }: Breakdown) {
   }
 
   const sortedRoles = [...roles].sort((a, b) => results[b.id] - results[a.id]);
-  const activeRole = sortedRoles.find((r) => r.id === role) || sortedRoles[0];
-  const activeIndex = sortedRoles.findIndex((r) => r.id === role);
+  const activeIndex = role ? sortedRoles.findIndex((r) => r.id === role) : 0;
+  const activeRole = sortedRoles[activeIndex] || sortedRoles[0];
 
   if (!activeRole) {
     return <div>Role not found</div>;
