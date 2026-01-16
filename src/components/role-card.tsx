@@ -43,7 +43,7 @@ export default function RoleCard({
           isSelected
             ? `${colors.bg} ${colors.border} ${colors.shadow} border-2 shadow-lg`
             : "border border-neutral-200 shadow-md opacity-70 hover:opacity-100"
-        }     
+        }
       `}
     >
       <h3
