@@ -4,10 +4,6 @@ export default function Summary() {
   return (
     <div className="flex flex-col gap-10">
       <div>
-        Optional! If you&apos;d like to show off your design sensibilities, add
-        a summary page here.
-      </div>
-      <div>
         <Link
           href="/discover/breakdown"
           className="inline-flex h-12 items-center justify-center rounded-full 
